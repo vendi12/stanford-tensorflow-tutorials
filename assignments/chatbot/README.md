@@ -92,17 +92,26 @@ the Cornell Movie-Dialogs Corpus from
 https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html
 Unzip it
 
+cd data <br>
+wget http://www.mpi-sws.org/~cristian/data/cornell_movie_dialogs_corpus.zip <br>
+unzip cornell_movie_dialogs_corpus.zip <br>
+rm cornell_movie_dialogs_corpus.zip <br>
+
 Step 2: python data.py
 <br>This will do all the pre-processing for the Cornell dataset.
 
 Step 3:
-python chatbot.py --mode [train/chat] <br>
+python chatbot.py --mode train <br>
+
 If mode is train, then you train the chatbot. By default, the model will
 restore the previously trained weights (if there is any) and continue
 training up on that.
 
 If you want to start training from scratch, please delete all the checkpoints
 in the checkpoints folder.
+
+Step 4:
+python chatbot.py --mode chat <br>
 
 If the mode is chat, you'll go into the interaction mode with the bot.
 
